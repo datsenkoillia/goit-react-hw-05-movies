@@ -2,7 +2,11 @@ import React, { Suspense } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import { fetchMovieDetails } from 'servises/movies-api';
-import { AddInfWrapper, MovieItemWrapper } from './MovieItem.styled';
+import {
+  AddInfWrapper,
+  GoBackButton,
+  MovieItemWrapper,
+} from './MovieItem.styled';
 
 const MovieItem = () => {
   const { movieId } = useParams();
@@ -34,9 +38,9 @@ const MovieItem = () => {
     <>
       {!isLoader && isMovieShow && (
         <>
-          <button type="button">
-            <Link to={backLinkRef.current}>Go back</Link>
-          </button>
+          <Link to={backLinkRef.current}>
+            <GoBackButton type="button">&#8592; Go back </GoBackButton>
+          </Link>
 
           <MovieItemWrapper>
             <div>

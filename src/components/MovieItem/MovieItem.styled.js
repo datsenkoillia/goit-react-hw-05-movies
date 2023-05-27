@@ -11,3 +11,9 @@ export const MovieItemWrapper = styled.div`
 export const AddInfWrapper = styled.div`
   border-bottom: 2px solid #aaaaaa;
 `;
+
+export const GoBackButton = styled.button`
+  &:hover {
+    background-color: #fff;
+  }
+`;
