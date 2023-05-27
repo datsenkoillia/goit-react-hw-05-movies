@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchMovies } from 'servises/movies-api';
-import { TrandingMoviesList } from 'components/MoviesList/MoviesList';
+import { TrandingMoviesList } from 'components/TrandingMoviesList/TrandingMoviesList';
 
 const HomePage = () => {
   const [isListShow, setIsListShow] = useState(false);

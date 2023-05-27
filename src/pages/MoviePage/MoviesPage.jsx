@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { fetchSearchMovies } from 'servises/movies-api';
-import { SearchMoviesList } from 'components/MoviesList/MoviesList';
+import { SearchMoviesList } from 'components/SearchMoviesList/SearchMoviesList';
 
 const MoviesPage = () => {
   const [searchParams, setSearhParams] = useSearchParams();
@@ -22,7 +22,6 @@ const MoviesPage = () => {
     setSearhParams({ query: searchText.trim() });
   };
 
-
   useEffect(() => {
     if (query) {
       setIsLoader(true);
@@ -37,7 +36,6 @@ const MoviesPage = () => {
     }
   }, [query]);
 
-
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -47,11 +45,7 @@ const MoviesPage = () => {
       <>
         {!isLoader && (
           <>
-            {movies.length > 0 && (
-              <SearchMoviesList
-                movies={movies}
-              />
-            )}
+            {movies.length > 0 && <SearchMoviesList movies={movies} />}
             {movies.length === 0 && query && (
               <p>No matches found! Please enter other data for search.</p>
             )}
@@ -63,4 +57,3 @@ const MoviesPage = () => {
 };
 
 export default MoviesPage;
-
