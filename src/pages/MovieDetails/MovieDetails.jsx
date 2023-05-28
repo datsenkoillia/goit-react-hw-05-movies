@@ -8,7 +8,7 @@ import {
   MovieItemWrapper,
 } from './MovieDetails.styled';
 
-const MovieItem = () => {
+const MovieDetails = () => {
   const { movieId } = useParams();
   const location = useLocation();
 
@@ -94,4 +94,4 @@ const MovieItem = () => {
   );
 };
 
-export default MovieItem;
+export default MovieDetails;

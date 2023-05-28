@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { fetchMovies } from 'servises/movies-api';
 import { TrandingMoviesList } from 'components/TrandingMoviesList/TrandingMoviesList';
 
-const HomePage = () => {
+const Home = () => {
   const [isListShow, setIsListShow] = useState(false);
   const [movies, setMovies] = useState([]);
   const [isLoader, setIsLoader] = useState(false);
@@ -34,4 +34,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;
