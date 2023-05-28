@@ -6,7 +6,7 @@ import {
   AddInfWrapper,
   GoBackButton,
   MovieItemWrapper,
-} from './MovieItem.styled';
+} from './MovieDetails.styled';
 
 const MovieItem = () => {
   const { movieId } = useParams();
